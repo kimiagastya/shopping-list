@@ -55,7 +55,7 @@ def show_main(request):
     product = Product.objects.filter(user=request.user)
     context = {
         'name': request.user.username,
-        'class': 'PBP D', # Kelas PBP kamu
+        'class': 'PBP D',
         'product': product,
         'last_login': request.COOKIES['last_login'],
     }
