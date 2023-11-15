@@ -114,6 +114,7 @@
         return fetch("{% url 'main:get_product_json' %}").then((res) => res.json())
     }
     async function refreshProducts() {
+        console.log("refresh called")
         document.getElementById("product_table").innerHTML = ""
         const products = await getProducts()
         let htmlString = `<tr>
